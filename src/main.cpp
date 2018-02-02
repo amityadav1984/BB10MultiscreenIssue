@@ -14,12 +14,9 @@
  * limitations under the License.
  */
 
-#include "applicationui.hpp"
+#include "screen1.hpp"
 
 #include <bb/cascades/Application>
-
-#include <QLocale>
-#include <QTranslator>
 
 #include <Qt/qdeclarativedebug.h>
 
@@ -31,7 +28,7 @@ Q_DECL_EXPORT int main(int argc, char **argv)
 
     // Create the Application UI object, this is where the main.qml file
     // is loaded and the application scene is set.
-    ApplicationUI appui;
+    Screen1 screen1;
 
     // Enter the application main event loop.
     return Application::exec();

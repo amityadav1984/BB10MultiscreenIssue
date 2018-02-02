@@ -35,15 +35,20 @@ simulator {
 }
 
 config_pri_assets {
-    OTHER_FILES += $$quote($$BASEDIR/assets/main.qml)
+    OTHER_FILES += \
+        $$quote($$BASEDIR/assets/screen1.qml) \
+        $$quote($$BASEDIR/assets/screen2.qml)
 }
 
 config_pri_source_group1 {
     SOURCES += \
-        $$quote($$BASEDIR/src/applicationui.cpp) \
-        $$quote($$BASEDIR/src/main.cpp)
+        $$quote($$BASEDIR/src/main.cpp) \
+        $$quote($$BASEDIR/src/screen1.cpp) \
+        $$quote($$BASEDIR/src/screen2.cpp)
 
-    HEADERS += $$quote($$BASEDIR/src/applicationui.hpp)
+    HEADERS += \
+        $$quote($$BASEDIR/src/screen1.hpp) \
+        $$quote($$BASEDIR/src/screen2.hpp)
 }
 
 CONFIG += precompile_header

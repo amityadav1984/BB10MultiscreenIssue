@@ -14,24 +14,22 @@
  * limitations under the License.
  */
 
-#ifndef ApplicationUI_HPP_
-#define ApplicationUI_HPP_
+import bb.cascades 1.4
 
-#include <QObject>
-
-/*!
- * @brief Application UI object
- *
- * Use this object to create and init app UI, to create context objects, to register the new meta types etc.
- */
-class ApplicationUI : public QObject
-{
-    Q_OBJECT
-public:
-    ApplicationUI();
-    virtual ~ApplicationUI() {}
-
-publi
-};
-
-#endif /* ApplicationUI_HPP_ */
+Page {
+    Container {
+        
+        layout: DockLayout {
+        }
+                
+        Button{
+            text: "Screen 1"
+            horizontalAlignment: HorizontalAlignment.Center
+            verticalAlignment: VerticalAlignment.Center
+            onClicked: {
+                console.log("This will print and launch Screen2")
+                _app.launchScreen2();
+            }
+        }
+    }
+}

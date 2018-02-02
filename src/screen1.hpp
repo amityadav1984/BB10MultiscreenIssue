@@ -19,19 +19,28 @@
 
 #include <QObject>
 
+#include <bb/cascades/Application>
+#include <bb/cascades/QmlDocument>
+#include <bb/cascades/AbstractPane>
+#include <iostream>
+
+using namespace std;
+using namespace bb::cascades;
+
 /*!
  * @brief Application UI object
  *
  * Use this object to create and init app UI, to create context objects, to register the new meta types etc.
  */
-class ApplicationUI : public QObject
+class Screen1 : public QObject
 {
     Q_OBJECT
 public:
-    ApplicationUI();
-    virtual ~ApplicationUI() {}
+    Screen1();
+    virtual ~Screen1() {}
 
-publi
+public slots:
+    void launchScreen2();
 };
 
 #endif /* ApplicationUI_HPP_ */

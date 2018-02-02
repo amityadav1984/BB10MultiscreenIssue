@@ -14,15 +14,10 @@
  * limitations under the License.
  */
 
-#include "applicationui.hpp"
+#include "screen1.hpp"
+#include "screen2.hpp"
 
-#include <bb/cascades/Application>
-#include <bb/cascades/QmlDocument>
-#include <bb/cascades/AbstractPane>
-
-using namespace bb::cascades;
-
-ApplicationUI::ApplicationUI() : QObject() {
+Screen1::Screen1() : QObject() {
     // Create scene document from main.qml asset, the parent is set
     // to ensure the document gets destroyed properly at shut down.
     QmlDocument *qml = QmlDocument::create("asset:///screen1.qml").parent(this);
@@ -34,4 +29,9 @@ ApplicationUI::ApplicationUI() : QObject() {
     Application::instance()->setScene(root);
 
     qml->setContextProperty("_app", this);
+}
+
+void Screen1::launchScreen2(){
+  cout<<"launchScreen2() will called. Control comes over here"<<endl;
+  Screen2 screen2;
 }
